@@ -14,9 +14,59 @@
       </thead>
       <tbody>
         <tr>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td> {{ nombre }} </td>
+          <td> upperCase </td>
+          <td>{{ nombre | uppercase }}</td>
+        </tr>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> lowerCase </td>
+          <td>{{ nombre | lowercase }}</td>
+        </tr>
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> slice:4 </td>
+          <td>{{ nombre | slice:4 }}</td>
+        </tr>
+        <tr>
+          <td> {{ PI }} </td>
+          <td> number:'2.0-2' </td>
+          <td>{{ PI | number:'2.0-2' }}</td>
+        </tr>
+        <tr>
+          <td> {{ porcentaje }} </td>
+          <td> percent </td>
+          <td>{{ porcentaje | percent }}</td>
+        </tr>
+        <tr>
+          <td> {{ porcentaje }} </td>
+          <td> percent:'.1' </td>
+          <td>{{ porcentaje | percent:'.1' }}</td>
+        </tr>
+        <tr>
+          <td> {{ salario }} </td>
+          <td> currency </td>
+          <td>{{ salario | currency:'EUR' }}</td>
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date </td>
+          <td>{{ fecha | date }}</td>
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date:'medium' </td>
+          <td>{{ fecha | date:'medium' }}</td>
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date:'short' </td>
+          <td>{{ fecha | date:'short' }}</td>
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date:'MMMM - dd' </td>
+          <td>{{ fecha | date:'MMMM - dd':'':idioma }}</td>
         </tr>
       </tbody>
     </table>

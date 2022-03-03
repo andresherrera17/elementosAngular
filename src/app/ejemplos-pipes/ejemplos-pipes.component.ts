@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+//decoradores
 @Component({
   selector: 'app-ejemplos-pipes',
   templateUrl: './ejemplos-pipes.component.html',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjemplosPipesComponent implements OnInit {
 
+  nombre: string = 'Andres Herrera';
+  cont: number = 0;
+  PI: number = Math.PI;
+  porcentaje: number = 0.236;
+  salario: number = 1243.5;
+  fecha: Date = new Date()
+  idioma: string = 'es';
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  contador() {
+    this.cont++
+  }
+
 
 }
