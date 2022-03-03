@@ -68,6 +68,21 @@
           <td> date:'MMMM - dd' </td>
           <td>{{ fecha | date:'MMMM - dd':'':idioma }}</td>
         </tr>
+
+        <tr>
+          <td> {{ nombre }} </td>
+          <td> custom mayuscula </td>
+          <td>{{ nombre | mayusculas:1}}</td>
+        </tr>
+        <!-- ACTIVIDAD -->
+        <!-- Van a crear un pipe, se le va a enviar un texto y un parametro
+        que va hacer activar(true, false)
+
+        van a crear un boton(click) que va modificar la variable activar
+
+        contraseña123 - *************  -->
+
+
       </tbody>
     </table>
   </div>
