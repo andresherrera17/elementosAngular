@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { TextoComponent } from './texto/texto.component';
-import { BuscarComponent } from './menu/buscar/buscar.component';
 import { EjemplosPipesComponent } from './ejemplos-pipes/ejemplos-pipes.component';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { EjemplosPipesComponent } from './ejemplos-pipes/ejemplos-pipes.componen
     AppComponent,
     MenuComponent,
     TextoComponent,
-    BuscarComponent,
     EjemplosPipesComponent
   ],
   //Lo que necesite angular, mis librerias
