@@ -16,6 +16,7 @@ export class EjemplosPipesComponent implements OnInit {
   fecha: Date = new Date()
   idioma: string = 'es';
   activar: boolean = false;
+  nombreM: string = 'andres HerRera bEnaVides'
   constructor() { }
 
   ngOnInit(): void {
