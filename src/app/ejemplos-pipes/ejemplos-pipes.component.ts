@@ -15,6 +15,7 @@ export class EjemplosPipesComponent implements OnInit {
   salario: number = 1243.5;
   fecha: Date = new Date()
   idioma: string = 'es';
+  activar: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

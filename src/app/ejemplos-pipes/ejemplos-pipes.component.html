@@ -82,6 +82,12 @@
 
         contraseña123 - *************  -->
 
+        <tr>
+          <td> Activar contraseña {{ activar }} </td>
+          <td> <button class="btn btn-primary" (click)="activar = !activar"> Activar/Desactivar </button> </td>
+          <td>{{ nombre | contrasena:activar}}</td>
+        </tr>
+
 
       </tbody>
     </table>

@@ -15,6 +15,7 @@ import { EjemplosPipesComponent } from './ejemplos-pipes/ejemplos-pipes.componen
 
 //pipes
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
+import { ContrasenaPipe } from './pipes/contrasena.pipe';
 
 registerLocaleData(LocalEs);
 
@@ -25,7 +26,8 @@ registerLocaleData(LocalEs);
     MenuComponent,
     TextoComponent,
     EjemplosPipesComponent,
-    MayusculasPipe
+    MayusculasPipe,
+    ContrasenaPipe
   ],
   //Lo que necesite angular, mis librerias
   imports: [
