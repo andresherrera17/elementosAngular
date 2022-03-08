@@ -23,4 +23,8 @@ export class FormularioNgmodelComponent implements OnInit {
     console.log(this.persona);
   }
 
+  // validarMinLetras() {
+  //   return this.persona.nombre.length < 5 ? true : false;
+  // }
+
 }
