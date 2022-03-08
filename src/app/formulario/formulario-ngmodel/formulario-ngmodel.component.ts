@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IPersona } from 'src/app/interfaces/persona.interface';
 
 @Component({
   selector: 'app-formulario-ngmodel',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioNgmodelComponent implements OnInit {
 
-  nombre: string = '';
+  persona: IPersona = {} as IPersona;
 
   constructor() { }
 
@@ -15,7 +16,11 @@ export class FormularioNgmodelComponent implements OnInit {
   }
 
   mostrarNombre() {
-    console.log(this.nombre)
+    console.log(this.persona.nombre)
+  }
+
+  guardar() {
+    console.log(this.persona);
   }
 
 }
