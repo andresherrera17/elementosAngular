@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { registerLocaleData } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import LocalEs from '@angular/common/locales/es';
 
 //rutas
@@ -39,7 +40,8 @@ registerLocaleData(LocalEs);
   //Lo que necesite angular, mis librerias
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   // Servicios
   providers: [],

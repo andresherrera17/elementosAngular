@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioNgmodelComponent implements OnInit {
 
+  nombre: string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  mostrarNombre() {
+    console.log(this.nombre)
   }
 
 }
