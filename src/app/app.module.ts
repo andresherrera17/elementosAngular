@@ -17,6 +17,8 @@ import { EjemplosPipesComponent } from './ejemplos-pipes/ejemplos-pipes.componen
 import { MayusculasPipe } from './pipes/mayusculas.pipe';
 import { ContrasenaPipe } from './pipes/contrasena.pipe';
 import { CapitalizarPipe } from './pipes/capitalizar.pipe';
+import { FormularioNgmodelComponent } from './formulario/formulario-ngmodel/formulario-ngmodel.component';
+import { FormularioReactivosComponent } from './formulario/formulario-reactivos/formulario-reactivos.component';
 
 
 registerLocaleData(LocalEs);
@@ -30,7 +32,9 @@ registerLocaleData(LocalEs);
     EjemplosPipesComponent,
     MayusculasPipe,
     ContrasenaPipe,
-    CapitalizarPipe
+    CapitalizarPipe,
+    FormularioNgmodelComponent,
+    FormularioReactivosComponent
   ],
   //Lo que necesite angular, mis librerias
   imports: [
