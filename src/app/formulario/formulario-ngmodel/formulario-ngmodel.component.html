@@ -23,10 +23,9 @@
     <div class="input-group mb-3">
       <label class="form-label" for="pais">Pais</label>
       <select class="custom-select" [(ngModel)]="persona.pais" name="pais">
-        <option selected>Choose...</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option *ngFor="let elem of paises" [value]="elem.name">
+          {{ elem.name }}
+        </option>
       </select>
     </div>
     <button type="submit" class="btn btn-primary" (click)="guardar()">Guardar</button>

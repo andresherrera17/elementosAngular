@@ -10,6 +10,7 @@ import { PaisService } from 'src/app/services/pais.service';
 export class FormularioNgmodelComponent implements OnInit {
 
   persona: IPersona = {} as IPersona;
+  paises: any[] = [];
   edad: number = 0;
   constructor(private _paisService: PaisService) { }
 
@@ -27,7 +28,7 @@ export class FormularioNgmodelComponent implements OnInit {
 
   getPaises() {
     this._paisService.getPaises().subscribe(paises => {
-      console.log(paises);
+      this.paises = paises;
     });
   }
 
