@@ -52,11 +52,20 @@ export class FormularioNgmodelComponent implements OnInit {
   // apellido
   // Correo
   // direecion
-  // edad > 18 *ngIf
-  //   cedula
+  // edad > 18 
+  //   cedula *ngIf
   //       si no
-  //   tarjetaidentidad
+  //   tarjetaidentidad *ngIf
   // guardar [persona1, persona2, persona 3] varias personas
   // van a mostrar en una tabla las personas que se crean  *ngFor
+
+  circular() {
+    let objeto1 = { nombre: 'Andres', edad: 2 };
+
+    let objeto2 = { ...objeto1, apellido: 2 };
+
+    let objeto3 = Object.assign(objeto1);
+
+  }
 
 }

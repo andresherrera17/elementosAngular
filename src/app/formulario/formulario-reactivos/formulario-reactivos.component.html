@@ -1,1 +1,29 @@
-<p>formulario-reactivos works!</p>
+<h4>Formularios Reactivos</h4>
+
+<form [formGroup]="formGroup" (submit)="guardar()">
+
+  <label for="fecha">Fecha</label>
+  <input type="date" name="fecha" class="form-control" formControlName="fecha" />
+
+  <label for="nombre">Nombre</label>
+  <input type="text" name="nombre" class="form-control" formControlName="nombre" />
+
+  <label for="email">Email</label>
+  <input type="email" name="email" class="form-control" formControlName="email" />
+
+  <label for="contrasena">Contraseña</label>
+  <input type="password" name="contrasena" class="form-control" formControlName="contrasena" />
+
+  <div formGroupName="direccion">
+    <h5>Direccion</h5>
+    <br>
+    <label for="calle">Calle</label>
+    <input type="text" name="calle" class="form-control" formControlName="calle" />
+
+    <label for="avenida">Avenida</label>
+    <input type="text" name="avenida" class="form-control" formControlName="avenida" />
+  </div>
+
+  <button type="submit" class="btn btn-primary"> Guardar </button>
+
+</form>
