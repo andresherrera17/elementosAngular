@@ -9,9 +9,12 @@ import { PaisService } from 'src/app/services/pais.service';
 })
 export class FormularioNgmodelComponent implements OnInit {
 
-  persona: IPersona = {} as IPersona;
+  persona: IPersona = {} as IPersona // formulario;
+  personaAreeglo: IPersona[] = [];
   paises: any[] = [];
   edad: number = 0;
+
+  personaRecuperada: any;
   constructor(private _paisService: PaisService) { }
 
   ngOnInit(): void {
@@ -23,7 +26,13 @@ export class FormularioNgmodelComponent implements OnInit {
   }
 
   guardar() {
-    console.log(this.persona);
+
+    localStorage.setItem('persona', JSON.stringify(this.persona))
+  }
+
+  recuperarPersona() {
+
+    this.personaRecuperada = localStorage.getItem('persona');
   }
 
   getPaises() {
@@ -35,5 +44,19 @@ export class FormularioNgmodelComponent implements OnInit {
   // validarMinLetras() {
   //   return this.persona.nombre.length < 5 ? true : false;
   // }
+
+
+  // Formulario en una nueva menu
+  // campos
+  // Nombres
+  // apellido
+  // Correo
+  // direecion
+  // edad > 18 *ngIf
+  //   cedula
+  //       si no
+  //   tarjetaidentidad
+  // guardar [persona1, persona2, persona 3] varias personas
+  // van a mostrar en una tabla las personas que se crean  *ngFor
 
 }
