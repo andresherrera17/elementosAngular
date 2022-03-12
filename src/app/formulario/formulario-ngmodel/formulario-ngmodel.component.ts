@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPersona } from 'src/app/interfaces/persona.interface';
+import { PaisService } from 'src/app/services/pais.service';
 
 @Component({
   selector: 'app-formulario-ngmodel',
@@ -9,10 +10,11 @@ import { IPersona } from 'src/app/interfaces/persona.interface';
 export class FormularioNgmodelComponent implements OnInit {
 
   persona: IPersona = {} as IPersona;
-
-  constructor() { }
+  edad: number = 0;
+  constructor(private _paisService: PaisService) { }
 
   ngOnInit(): void {
+    this.getPaises();
   }
 
   mostrarNombre() {
@@ -21,6 +23,12 @@ export class FormularioNgmodelComponent implements OnInit {
 
   guardar() {
     console.log(this.persona);
+  }
+
+  getPaises() {
+    this._paisService.getPaises().subscribe(paises => {
+      console.log(paises);
+    });
   }
 
   // validarMinLetras() {

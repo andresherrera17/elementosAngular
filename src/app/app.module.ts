@@ -20,6 +20,8 @@ import { ContrasenaPipe } from './pipes/contrasena.pipe';
 import { CapitalizarPipe } from './pipes/capitalizar.pipe';
 import { FormularioNgmodelComponent } from './formulario/formulario-ngmodel/formulario-ngmodel.component';
 import { FormularioReactivosComponent } from './formulario/formulario-reactivos/formulario-reactivos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PaisService } from './services/pais.service';
 
 
 registerLocaleData(LocalEs);
@@ -41,10 +43,11 @@ registerLocaleData(LocalEs);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   // Servicios
-  providers: [],
+  providers: [PaisService],
   //componente por defecto
   bootstrap: [AppComponent]
 })
