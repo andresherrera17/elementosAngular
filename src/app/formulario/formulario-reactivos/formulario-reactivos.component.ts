@@ -1,3 +1,4 @@
+import { invalid } from '@angular/compiler/src/render3/view/util';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -21,7 +22,7 @@ export class FormularioReactivosComponent implements OnInit {
     const hoy = new Date().toISOString().substring(0, 10);
     this.formGroup = this.formBuilder.group({
       fecha: hoy,
-      nombre: [nombre, [Validators.required, Validators.minLength(5)]],
+      nombre: ['', [Validators.required, Validators.minLength(5)]],
       email: ['', [Validators.required, Validators.pattern('^[^@]+@[^@]+\.[a-zA-Z]{2,}$')]],
       contrasena: ['', [Validators.required, Validators.minLength(6), this.validarContrasena]],
       direccion:
@@ -47,5 +48,20 @@ export class FormularioReactivosComponent implements OnInit {
   guardar() {
     console.log(this.formGroup);
   }
+
+  get usuarioNoValido() {
+    return this.nombre?.invalid && this.nombre?.touched
+  }
+
+  getError(controlName: string) {
+    let error = '';
+    const control = this.formGroup.get(controlName);
+    if (control?.touched && control.errors != null) {
+      error = JSON.stringify(control?.errors)
+    }
+    return error;
+  }
+
+  get nombre(): AbstractControl | null { return this.formGroup.get('nombre') }
 
 }
