@@ -10,6 +10,10 @@ const routes: Routes = [
   { path: 'texto', component: TextoComponent },
   { path: 'formulario/ngmodel', component: FormularioNgmodelComponent },
   { path: 'formulario/reactivos', component: FormularioReactivosComponent },
+  {
+    path: 'heroes',
+    loadChildren: () => import('./heroes/heroes.module').then(m => m.HeroesModule)
+  },
   { path: '**', pathMatch: 'full', redirectTo: 'texto' }
 ];
 

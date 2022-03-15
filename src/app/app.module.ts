@@ -22,6 +22,7 @@ import { FormularioNgmodelComponent } from './formulario/formulario-ngmodel/form
 import { FormularioReactivosComponent } from './formulario/formulario-reactivos/formulario-reactivos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaisService } from './services/pais.service';
+import { HeroesModule } from './heroes/heroes.module';
 
 
 registerLocaleData(LocalEs);
