@@ -2,15 +2,5 @@
 
 
 <div class="card-colums">
-
-  <div class="card" style="width: 18rem;">
-    <img src="assets/img/aquaman.png" class="card-img-top" alt="aquaman">
-    <div class="card-body">
-      <h5 class="card-title">Aquaman</h5>
-      <p class="card-text">El mas fuerte del mar</p>
-      <button class="btn btn-outline-primary btn-block">
-        ver más...
-      </button>
-    </div>
-  </div>
+  <app-heroe-tarjeta [heroe]="her" *ngFor="let her of heroes"></app-heroe-tarjeta>
 </div>

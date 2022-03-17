@@ -6,6 +6,7 @@ import { HeroesComponent } from './heroes.component';
 import { BuscardorComponent } from './buscardor/buscardor.component';
 import { HeroeComponent } from './heroe/heroe.component';
 import { HeroeTarjetaComponent } from './heroe-tarjeta/heroe-tarjeta.component';
+import { HeroesService } from '../services/heroes.service';
 
 
 @NgModule({
@@ -18,6 +19,9 @@ import { HeroeTarjetaComponent } from './heroe-tarjeta/heroe-tarjeta.component';
   imports: [
     CommonModule,
     HeroesRoutingModule
+  ],
+  providers: [
+    HeroesService
   ]
 })
 export class HeroesModule { }

@@ -1,1 +1,10 @@
-<p>heroe-tarjeta works!</p>
+<div class="card" style="width: 18rem;">
+  <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
+  <div class="card-body">
+    <h5 class="card-title">{{ heroe.nombre}}</h5>
+    <p class="card-text">{{ heroe.bio }}</p>
+    <button class="btn btn-outline-primary btn-block">
+      ver más...
+    </button>
+  </div>
+</div>
