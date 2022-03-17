@@ -7,6 +7,7 @@ import { BuscardorComponent } from './buscardor/buscardor.component';
 import { HeroeComponent } from './heroe/heroe.component';
 import { HeroeTarjetaComponent } from './heroe-tarjeta/heroe-tarjeta.component';
 import { HeroesService } from '../services/heroes.service';
+import { PaisService } from '../services/pais.service';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { HeroesService } from '../services/heroes.service';
     HeroesRoutingModule
   ],
   providers: [
-    HeroesService
+    HeroesService,
+    PaisService
   ]
 })
 export class HeroesModule { }
