@@ -38,4 +38,8 @@ export class HeroesService {
   ]
 
   constructor() { }
+
+  getHeroes(): IHeroe[] {
+    return this.heroes;
+  }
 }
