@@ -52,13 +52,17 @@ export class HeroesService {
     return this.heroes$.asObservable();
   }
 
-  agregarHeroes(heroe: IHeroe) {
+  agregarHeroes(heroe: IHeroe): void {
     this.heroes.push(heroe);
     this.heroes$.next(this.heroes);
   }
 
-  delete() {
-    this.heroes.unshift();
-    this.heroes$.next(this.heroes);
+  getHeroeById(id: string): IHeroe | undefined {
+    return this.heroes.find(x => x.idx === id);
   }
+
+  // delete() {
+  //   this.heroes.unshift();
+  //   this.heroes$.next(this.heroes);
+  // }
 }

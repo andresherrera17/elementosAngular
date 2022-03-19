@@ -1,5 +1,5 @@
 export interface IHeroe {
-  idx?: number;
+  idx?: string;
   nombre: string;
   bio: string;
   img: string;

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
 import { IHeroe } from '../interfaces/heroe.interface';
 import { HeroesService } from '../services/heroes.service';
-import { PaisService } from '../services/pais.service';
+import { uid } from 'uid';
 
 @Component({
   selector: 'app-heroes',
@@ -26,6 +26,7 @@ export class HeroesComponent implements OnInit {
 
   getHeroes() {
     this._serviceHeroes.getHeroes().subscribe(heroes => {
+      debugger;
       this.heroes = heroes;
     });
   }
@@ -46,7 +47,8 @@ export class HeroesComponent implements OnInit {
       bio: this.bio?.value,
       aparicion: this.aparicion?.value,
       casa: this.casa?.value,
-      img: `assets/img/${this.nombre?.value}.png`
+      img: `assets/img/${this.nombre?.value}.png`,
+      idx: uid()
     }
     this._serviceHeroes.agregarHeroes(heroe);
   }
