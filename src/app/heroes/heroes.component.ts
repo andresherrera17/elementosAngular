@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup } from '@angular/forms';
 import { IHeroe } from '../interfaces/heroe.interface';
 import { HeroesService } from '../services/heroes.service';
 import { PaisService } from '../services/pais.service';
@@ -20,12 +20,14 @@ export class HeroesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getHeroes();
     this.buildForm();
+    this.getHeroes();
   }
 
   getHeroes() {
-    this.heroes = this._serviceHeroes.getHeroes();
+    this._serviceHeroes.getHeroes().subscribe(heroes => {
+      this.heroes = heroes;
+    });
   }
 
   buildForm() {
@@ -33,12 +35,24 @@ export class HeroesComponent implements OnInit {
       nombre: '',
       bio: '',
       aparicion: '',
-      casa: ''
+      casa: '',
+      imagen: ''
     })
   }
 
   guardarHeroe() {
-
+    let heroe: IHeroe = {
+      nombre: this.nombre?.value,
+      bio: this.bio?.value,
+      aparicion: this.aparicion?.value,
+      casa: this.casa?.value,
+      img: `assets/img/${this.nombre?.value}.png`
+    }
+    this._serviceHeroes.agregarHeroes(heroe);
   }
 
+  get nombre(): AbstractControl | null { return this.formHeroes.get('nombre') };
+  get bio(): AbstractControl | null { return this.formHeroes.get('bio') };
+  get aparicion(): AbstractControl | null { return this.formHeroes.get('aparicion') };
+  get casa(): AbstractControl | null { return this.formHeroes.get('casa') };
 }
