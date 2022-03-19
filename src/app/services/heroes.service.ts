@@ -48,8 +48,12 @@ export class HeroesService {
     this.heroes$ = new Subject();
   }
 
-  getHeroes(): Observable<IHeroe[]> {
+  getHeroes$(): Observable<IHeroe[]> {
     return this.heroes$.asObservable();
+  }
+
+  getHeroes(): IHeroe[] {
+    return this.heroes;
   }
 
   agregarHeroes(heroe: IHeroe): void {
