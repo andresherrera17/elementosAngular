@@ -1,6 +1,7 @@
 <h1>Heroes <small>Marvel y DC </small> </h1>
 
-
-<div class="card-colums">
-  <app-heroe-tarjeta [heroe]="her" *ngFor="let her of heroes"></app-heroe-tarjeta>
+<div class="container">
+  <div class="row">
+    <app-heroe-tarjeta class="col-md-3" [heroe]="her" *ngFor="let her of heroes"></app-heroe-tarjeta>
+  </div>
 </div>
