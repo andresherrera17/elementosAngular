@@ -1,4 +1,21 @@
 <h1>Heroes <small>Marvel y DC </small> </h1>
+<!-- Van a crear un formulario reactivo para crear heroes. -->
+<form [formGroup]="formHeroes" (ngSubmit)="guardarHeroe()">
+  <label for="nombre">Nombre</label>
+  <input type="text" class="form-control" formControlName="nombre" name="nombre" />
+
+  <label for="bio">Descripcion</label>
+  <input type="text" class="form-control" formControlName="bio" name="bio" />
+
+  <label for="aparicion">Aparicion</label>
+  <input type="text" class="form-control" formControlName="aparicion" name="aparicion" />
+
+  <label for="casa">Casa</label>
+  <input type="text" class="form-control" formControlName="casa" name="casa" />
+
+  <button type="submit" class="btn btn-primary">Guardar Heroe</button>
+</form>
+
 
 <div class="container">
   <div class="row">

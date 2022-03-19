@@ -8,6 +8,7 @@ import { HeroeComponent } from './heroe/heroe.component';
 import { HeroeTarjetaComponent } from './heroe-tarjeta/heroe-tarjeta.component';
 import { HeroesService } from '../services/heroes.service';
 import { PaisService } from '../services/pais.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PaisService } from '../services/pais.service';
   ],
   imports: [
     CommonModule,
-    HeroesRoutingModule
+    HeroesRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     HeroesService,

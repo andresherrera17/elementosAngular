@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { IHeroe } from '../interfaces/heroe.interface';
 import { HeroesService } from '../services/heroes.service';
 import { PaisService } from '../services/pais.service';
@@ -11,11 +12,11 @@ import { PaisService } from '../services/pais.service';
 export class HeroesComponent implements OnInit {
 
   heroes: IHeroe[] = [];
-
+  formHeroes: FormGroup = new FormGroup({});
 
   constructor(
     private _serviceHeroes: HeroesService,
-    private _servicePais: PaisService
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit(): void {
@@ -24,6 +25,19 @@ export class HeroesComponent implements OnInit {
 
   getHeroes() {
     this.heroes = this._serviceHeroes.getHeroes();
+  }
+
+  buildForm() {
+    this.formHeroes = this.formBuilder.group({
+      nombre: '',
+      bio: '',
+      aparicion: '',
+      casa: ''
+    })
+  }
+
+  guardarHeroe() {
+
   }
 
 }
